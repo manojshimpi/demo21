@@ -1,0 +1,68 @@
+<div class="ftco-blocks-cover-1">
+  <!-- data-stellar-background-ratio="0.5" style="background-image: url('./assets/images/hero_1.jpg')" -->
+ <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('./assets/images/hero_1.jpg')">
+   <div class="container">
+     <div class="row align-items-center ">
+
+       <div class="col-md-5 mt-5 pt-5">
+         <span class="text-cursive h5 text-red">Welcome To Our Website</span>
+         <h1 class="mb-3 font-weight-bold text-teal">Login</h1>
+         <p><a href="index.html" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Login</strong></p>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+<div class="site-section">
+ <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-8">
+    <form role="form" [formGroup]="loginform" (ngSubmit)="loginsubmitData()">
+      <fieldset>
+        <h2 class="text-color">React Form</h2>
+        <hr class="colorgraph">
+        
+        <div class="form-group">
+            <input type="text" formControlName="username" id="email" class="form-control input-lg" placeholder="User ID">
+        </div>
+
+        <div *ngIf="loginform.controls['username'].invalid && (loginform.controls['username'].dirty || loginform.controls['username'].touched)" class="alert alert-danger">  
+          <div *ngIf="loginform.controls['username'].errors.required">  
+            Username Name is required.  
+          </div>  
+        </div>  
+
+        <div class="form-group">
+         <input type="password" formControlName="password" id="password" class="form-control input-lg" placeholder="Password">
+        </div>
+
+        <div *ngIf="loginform.controls['password'].invalid && (loginform.controls['password'].dirty || loginform.controls['password'].touched)" class="alert alert-danger">  
+          <div *ngIf="loginform.controls['password'].errors.required">  
+            Password is required.  
+          </div>  
+        </div>  
+        
+        
+        <span class="button-checkbox">
+          <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
+          <a href="" class="btn btn-link pull-right">Forgot Password?</a>
+        </span>
+        
+        <hr class="colorgraph">
+        
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+              <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <a href="" class="btn btn-lg btn-primary btn-block">Register</a>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+ </div>
+</div>
